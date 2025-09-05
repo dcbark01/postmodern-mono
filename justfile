@@ -50,6 +50,11 @@ precommit:
   just deps
   just test
 
+# Start Jupyter Lab server
+jupyter-lab:
+  @uv run ipython kernel install --user --env VIRTUAL_ENV {{ justfile_directory() }}/.venv --name=foo
+  @uv run jupyter lab --config=./nb/nb_config.py
+
 # Remove cached files
 clean *args:
   uv run pyclean . \
