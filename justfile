@@ -7,6 +7,7 @@ alias c := check
 alias d := deps
 alias t := test
 alias pc := precommit
+alias jl := jupyter-lab
 
 set dotenv-load := true
 
